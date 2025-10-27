@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		5C6C53C82EAF1FFA00B7BFB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C6C53702EAF14DB00B7BFB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C6C53772EAF14DB00B7BFB8;
+			remoteInfo = com.bcaps.photobooth;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		5C6C53782EAF14DB00B7BFB8 /* com.bcaps.photobooth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = com.bcaps.photobooth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C6C53C42EAF1FFA00B7BFB8 /* com.bcaps.photoboothTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = com.bcaps.photoboothTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = com.bcaps.photobooth;
 			sourceTree = "<group>";
 		};
+		5C6C53C52EAF1FFA00B7BFB8 /* com.bcaps.photoboothTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = com.bcaps.photoboothTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5C6C53752EAF14DB00B7BFB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C6C53C12EAF1FFA00B7BFB8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				5C6C537A2EAF14DB00B7BFB8 /* com.bcaps.photobooth */,
+				5C6C53C52EAF1FFA00B7BFB8 /* com.bcaps.photoboothTests */,
 				5C6C53792EAF14DB00B7BFB8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				5C6C53782EAF14DB00B7BFB8 /* com.bcaps.photobooth.app */,
+				5C6C53C42EAF1FFA00B7BFB8 /* com.bcaps.photoboothTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = 5C6C53782EAF14DB00B7BFB8 /* com.bcaps.photobooth.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5C6C53C32EAF1FFA00B7BFB8 /* com.bcaps.photoboothTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C6C53CA2EAF1FFA00B7BFB8 /* Build configuration list for PBXNativeTarget "com.bcaps.photoboothTests" */;
+			buildPhases = (
+				5C6C53C02EAF1FFA00B7BFB8 /* Sources */,
+				5C6C53C12EAF1FFA00B7BFB8 /* Frameworks */,
+				5C6C53C22EAF1FFA00B7BFB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C6C53C92EAF1FFA00B7BFB8 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5C6C53C52EAF1FFA00B7BFB8 /* com.bcaps.photoboothTests */,
+			);
+			name = com.bcaps.photoboothTests;
+			packageProductDependencies = (
+			);
+			productName = com.bcaps.photoboothTests;
+			productReference = 5C6C53C42EAF1FFA00B7BFB8 /* com.bcaps.photoboothTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,11 @@
 				TargetAttributes = {
 					5C6C53772EAF14DB00B7BFB8 = {
 						CreatedOnToolsVersion = 16.4;
+						LastSwiftMigration = 1640;
+					};
+					5C6C53C32EAF1FFA00B7BFB8 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 5C6C53772EAF14DB00B7BFB8;
 					};
 				};
 			};
@@ -100,12 +153,20 @@
 			projectRoot = "";
 			targets = (
 				5C6C53772EAF14DB00B7BFB8 /* com.bcaps.photobooth */,
+				5C6C53C32EAF1FFA00B7BFB8 /* com.bcaps.photoboothTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5C6C53762EAF14DB00B7BFB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C6C53C22EAF1FFA00B7BFB8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +183,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5C6C53C02EAF1FFA00B7BFB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C6C53C92EAF1FFA00B7BFB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C6C53772EAF14DB00B7BFB8 /* com.bcaps.photobooth */;
+			targetProxy = 5C6C53C82EAF1FFA00B7BFB8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5C6C53812EAF14DD00B7BFB8 /* Debug */ = {
@@ -249,11 +325,49 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9LP6LU529V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "S & J";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSCameraUsageDescription = "PhotoBooth needs camera access to capture photos for your photo sessions.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bebelcapistrano.com-bcaps-photobooth";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5C6C53852EAF14DD00B7BFB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9LP6LU529V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "S & J";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSCameraUsageDescription = "PhotoBooth needs camera access to capture photos for your photo sessions.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -269,32 +383,39 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = Release;
 		};
-		5C6C53852EAF14DD00B7BFB8 /* Release */ = {
+		5C6C53CB2EAF1FFA00B7BFB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bebelcapistrano.com-bcaps-photobooth";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bebelcapistrano.com-bcaps-photoboothTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/com.bcaps.photobooth.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/com.bcaps.photobooth";
+			};
+			name = Debug;
+		};
+		5C6C53CC2EAF1FFA00B7BFB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bebelcapistrano.com-bcaps-photoboothTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/com.bcaps.photobooth.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/com.bcaps.photobooth";
 			};
 			name = Release;
 		};
@@ -315,6 +436,15 @@
 			buildConfigurations = (
 				5C6C53842EAF14DD00B7BFB8 /* Debug */,
 				5C6C53852EAF14DD00B7BFB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C6C53CA2EAF1FFA00B7BFB8 /* Build configuration list for PBXNativeTarget "com.bcaps.photoboothTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C6C53CB2EAF1FFA00B7BFB8 /* Debug */,
+				5C6C53CC2EAF1FFA00B7BFB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
