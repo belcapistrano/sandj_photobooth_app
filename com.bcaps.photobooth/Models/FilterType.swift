@@ -1,14 +1,11 @@
 import Foundation
 
 enum FilterType: String, CaseIterable, Codable {
-    case none = "None"
-    case vintage = "Vintage"
-    case blackAndWhite = "B&W"
-    case sepia = "Sepia"
-    case vibrant = "Vibrant"
-    case dramatic = "Dramatic"
-    case cool = "Cool"
-    case warm = "Warm"
+    case original = "Original"
+    case warmRomance = "Warm"
+    case classicFilm = "Classic"
+    case elegantBW = "B&W"
+    case softDream = "Soft"
 
     var displayName: String {
         return rawValue
@@ -16,22 +13,31 @@ enum FilterType: String, CaseIterable, Codable {
 
     var description: String {
         switch self {
-        case .none:
-            return "Original photo"
-        case .vintage:
-            return "Classic vintage look"
-        case .blackAndWhite:
-            return "Timeless black and white"
-        case .sepia:
-            return "Warm sepia tone"
-        case .vibrant:
-            return "Enhanced colors"
-        case .dramatic:
-            return "High contrast drama"
-        case .cool:
-            return "Cool blue tones"
-        case .warm:
-            return "Warm golden tones"
+        case .original:
+            return "Natural, unfiltered photos"
+        case .warmRomance:
+            return "Warm, golden tones for romantic feel"
+        case .classicFilm:
+            return "Vintage film look with soft contrast"
+        case .elegantBW:
+            return "Classic black and white with enhanced contrast"
+        case .softDream:
+            return "Soft, dreamy effect with subtle glow"
+        }
+    }
+
+    var icon: String {
+        switch self {
+        case .original:
+            return "camera"
+        case .warmRomance:
+            return "sun.max"
+        case .classicFilm:
+            return "film"
+        case .elegantBW:
+            return "circle.lefthalf.filled"
+        case .softDream:
+            return "sparkles"
         }
     }
 }
