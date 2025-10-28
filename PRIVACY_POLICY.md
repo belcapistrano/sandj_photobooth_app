@@ -77,7 +77,7 @@ We may update this privacy policy from time to time. The "Last Updated" date at 
 If you have any questions about this privacy policy or the app's data practices, please contact:
 
 **Developer**: Bebel Capistrano
-**Email**: [YOUR_EMAIL_HERE]
+**Email**: jadephotoevents@gmail.com
 **Project**: S & J PhotoBooth App
 **Repository**: https://github.com/belcapistrano/sandj_photobooth_app
 

@@ -4,7 +4,7 @@ Wedding PhotoBooth for iOS
 
 ## 📧 Need Help?
 
-**Email**: [YOUR_EMAIL_HERE]
+**Email**: jadephotoevents@gmail.com
 **Response Time**: We typically respond within 24 hours
 
 ---
@@ -111,7 +111,7 @@ No! The app works completely offline. All photos are processed and stored locall
 
 ## Contact Support
 
-**Email**: [YOUR_EMAIL_HERE]
+**Email**: jadephotoevents@gmail.com
 
 **When contacting support, please include:**
 - Your device model (iPhone 12, iPad Pro, etc.)

@@ -232,7 +232,7 @@ S & J PhotoBooth App **does NOT use encryption** that requires export compliance
 ## Contact Information
 
 **Developer**: Bebel Capistrano
-**Email**: [YOUR_EMAIL_HERE]
+**Email**: jadephotoevents@gmail.com
 **Organization**: Individual Developer
 **App**: S & J PhotoBooth App
 **Repository**: https://github.com/belcapistrano/sandj_photobooth_app
