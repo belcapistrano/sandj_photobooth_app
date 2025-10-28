@@ -20,11 +20,9 @@ class CameraViewController: UIViewController {
     private var previewLayer: AVCaptureVideoPreviewLayer?
     private var captureButton: UIButton!
     private var controlBar: ControlBar!
-    private var filterSelectionView: FilterSelectionView!
 
     private var currentSession: PhotoSession?
     private var capturedPhotos: [Photo] = []
-    private var currentFilter: FilterType = .original
 
     // PhotoBooth session properties
     private var isPhotoBoothSession = false
@@ -60,7 +58,6 @@ class CameraViewController: UIViewController {
         updateTitle()
 
         setupCaptureButton()
-        setupFilterSelection()
         setupControlBar()
         setupNavigationBar()
         setupCountdownLabel()
@@ -134,21 +131,6 @@ class CameraViewController: UIViewController {
             captureButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40),
             captureButton.widthAnchor.constraint(equalToConstant: 200),
             captureButton.heightAnchor.constraint(equalToConstant: 60)
-        ])
-    }
-
-    private func setupFilterSelection() {
-        filterSelectionView = FilterSelectionView()
-        filterSelectionView.delegate = self
-
-        view.addSubview(filterSelectionView)
-        filterSelectionView.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            filterSelectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            filterSelectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            filterSelectionView.bottomAnchor.constraint(equalTo: captureButton.topAnchor, constant: -20),
-            filterSelectionView.heightAnchor.constraint(equalToConstant: 92)
         ])
     }
 
@@ -478,7 +460,7 @@ class CameraViewController: UIViewController {
     }
 
     private func startNewSession() {
-        currentSession = PhotoSession(selectedFilter: currentFilter, isWeddingTheme: PhotoStripComposer.shared.isWeddingTheme)
+        currentSession = PhotoSession()
         capturedPhotos.removeAll()
         updateUI()
     }
@@ -688,17 +670,14 @@ class CameraViewController: UIViewController {
             return
         }
 
-        // Apply selected filter to the captured photo
-        let processedImage = applyCurrentFilter(to: image)
-
         do {
-            session = try sessionManager.addPhotoToPhotoBoothSession(processedImage, session: session)
+            session = try sessionManager.addPhotoToPhotoBoothSession(image, session: session)
             currentSession = session
             capturedPhotos = session.photos
             currentPhotoIndex += 1
 
             updateSessionProgress()
-            showPhotoPreview(processedImage)
+            showPhotoPreview(image)
 
             if currentPhotoIndex < photosPerSession {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
@@ -711,11 +690,6 @@ class CameraViewController: UIViewController {
             showCameraError(error)
             stopPhotoBoothSession()
         }
-    }
-
-    private func applyCurrentFilter(to image: UIImage) -> UIImage {
-        guard currentFilter != .original else { return image }
-        return FilterManager.shared.applyFilter(currentFilter, to: image) ?? image
     }
 
     private func finishPhotoBoothSession() {
@@ -835,14 +809,6 @@ extension CameraViewController: ControlBarDelegate {
         cameraManager.switchCamera()
     }
 
-}
-
-extension CameraViewController: FilterSelectionDelegate {
-    func filterSelectionDidChange(_ filter: FilterType) {
-        currentFilter = filter
-        // TODO: Apply real-time filter to camera preview in Phase 3
-        print("Filter selected: \(filter.displayName)")
-    }
 }
 
 extension CameraViewController: ReviewViewControllerDelegate {

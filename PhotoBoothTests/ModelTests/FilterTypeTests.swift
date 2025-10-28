@@ -17,25 +17,31 @@ class FilterTypeTests: XCTestCase {
     // MARK: - Basic Enum Tests
 
     func testFilterTypeRawValues() {
-        // Test that all expected wedding filter types exist with correct raw values
-        XCTAssertEqual(FilterType.original.rawValue, "Original")
-        XCTAssertEqual(FilterType.warmRomance.rawValue, "Warm")
-        XCTAssertEqual(FilterType.classicFilm.rawValue, "Classic")
-        XCTAssertEqual(FilterType.elegantBW.rawValue, "B&W")
-        XCTAssertEqual(FilterType.softDream.rawValue, "Soft")
+        // Test that all expected filter types exist with correct raw values
+        XCTAssertEqual(FilterType.none.rawValue, "None")
+        XCTAssertEqual(FilterType.vintage.rawValue, "Vintage")
+        XCTAssertEqual(FilterType.blackAndWhite.rawValue, "B&W")
+        XCTAssertEqual(FilterType.sepia.rawValue, "Sepia")
+        XCTAssertEqual(FilterType.vibrant.rawValue, "Vibrant")
+        XCTAssertEqual(FilterType.dramatic.rawValue, "Dramatic")
+        XCTAssertEqual(FilterType.cool.rawValue, "Cool")
+        XCTAssertEqual(FilterType.warm.rawValue, "Warm")
     }
 
     func testFilterTypeAllCases() {
         // Test that all cases are included in allCases
         let allCases = FilterType.allCases
-        let expectedCount = 5
+        let expectedCount = 8
 
         XCTAssertEqual(allCases.count, expectedCount)
-        XCTAssertTrue(allCases.contains(.original))
-        XCTAssertTrue(allCases.contains(.warmRomance))
-        XCTAssertTrue(allCases.contains(.classicFilm))
-        XCTAssertTrue(allCases.contains(.elegantBW))
-        XCTAssertTrue(allCases.contains(.softDream))
+        XCTAssertTrue(allCases.contains(.none))
+        XCTAssertTrue(allCases.contains(.vintage))
+        XCTAssertTrue(allCases.contains(.blackAndWhite))
+        XCTAssertTrue(allCases.contains(.sepia))
+        XCTAssertTrue(allCases.contains(.vibrant))
+        XCTAssertTrue(allCases.contains(.dramatic))
+        XCTAssertTrue(allCases.contains(.cool))
+        XCTAssertTrue(allCases.contains(.warm))
     }
 
     func testFilterTypeUniqueRawValues() {
